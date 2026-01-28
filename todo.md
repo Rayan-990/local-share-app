@@ -47,3 +47,20 @@
 - [ ] Test device discovery on various networks
 - [ ] Test error handling and edge cases
 - [ ] Performance testing with large files
+
+## iOS Build & Deployment
+- [ ] Configure iOS build settings in app.config.ts
+- [ ] Generate IPA file for iOS
+- [ ] Test IPA on iOS devices
+- [ ] Add iOS-specific permissions and configurations
+- [ ] Create iOS build script
+
+## Design Enhancements
+- [ ] Add smooth animations and transitions
+- [ ] Enhance visual hierarchy and spacing
+- [ ] Improve color scheme and gradients
+- [ ] Add custom icons and illustrations
+- [ ] Optimize typography and font sizes
+- [ ] Add haptic feedback for interactions
+- [ ] Create loading states and skeletons
+- [ ] Improve empty states with illustrations

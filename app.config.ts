@@ -50,9 +50,17 @@ const config: ExpoConfig = {
   ios: {
     supportsTablet: true,
     bundleIdentifier: env.iosBundleId,
-    "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
-      }
+    buildNumber: "1",
+    infoPlist: {
+      ITSAppUsesNonExemptEncryption: false,
+      NSLocalNetworkUsageDescription: "LocalShare needs access to your local network to discover and share files with nearby devices",
+      NSBonjourServiceTypes: ["_localshare._tcp"],
+      NSMDNSServiceDiscoveryUsageDescription: "LocalShare uses mDNS to discover nearby devices",
+      UIBackgroundModes: ["fetch", "processing"],
+      NSPhotoLibraryUsageDescription: "LocalShare needs access to your photos to share them",
+      NSPhotoLibraryAddOnlyUsageDescription: "LocalShare needs permission to save received files",
+      NSDocumentsFolderUsageDescription: "LocalShare needs access to your documents",
+    },
   },
   android: {
     adaptiveIcon: {
@@ -117,6 +125,9 @@ const config: ExpoConfig = {
         android: {
           buildArchs: ["armeabi-v7a", "arm64-v8a"],
           minSdkVersion: 24,
+        },
+        ios: {
+          deploymentTarget: "13.0",
         },
       },
     ],
